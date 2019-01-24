@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels: 
+    matchLabels:
       component: worker
   template:
     metadata:
@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: worker
-          image: manjishri/multi-worker
-          env: 
+          image: stephengrider/multi-worker
+          env:
             - name: REDIS_HOST
               value: redis-cluster-ip-service
             - name: REDIS_PORT

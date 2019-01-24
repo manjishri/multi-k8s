@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels: 
+    matchLabels:
       component: server
   template:
     metadata:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: manjishri/multi-server
+          image: stephengrider/multi-server
           ports:
             - containerPort: 5000
           env:

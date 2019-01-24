@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchLabels: 
+    matchLabels:
       component: web
   template:
     metadata:
@@ -14,4 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: manjishri/multi-client
+          image: stephengrider/multi-client
+          ports:
+            - containerPort: 3000

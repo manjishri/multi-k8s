@@ -1,7 +1,7 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm install --registry=http://registry.npmjs.org
+RUN npm install
 COPY . .
 RUN npm run build
 
